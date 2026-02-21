@@ -1,0 +1,103 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-child-friendly-robot-character-interface-that-serves-as-the-conversation-partner-with-visual-elements-appropriate-for-young-english-learners",
+      "featureTitle": "Create a child-friendly robot character interface that serves as the conversation partner, with visual elements appropriate for young English learners",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/RobotCharacter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-voice-input-functionality-allowing-children-to-speak-english-phrases-or-sentences-to-the-robot",
+      "featureTitle": "Implement voice input functionality allowing children to speak English phrases or sentences to the robot",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/VoiceInput.tsx",
+        "frontend/src/hooks/useSpeechRecognition.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-correction-feedback-from-the-robot-in-a-clear-encouraging-manner-that-explains-mistakes-without-discouraging-the-child-learner",
+      "featureTitle": "Display correction feedback from the robot in a clear, encouraging manner that explains mistakes without discouraging the child learner",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CorrectionFeedback.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-conversation-flow-where-the-robot-responds-to-the-child-s-input-providing-both-corrections-and-continuing-the-dialogue-naturally",
+      "featureTitle": "Implement conversation flow where the robot responds to the child's input, providing both corrections and continuing the dialogue naturally",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ConversationHistory.tsx",
+        "frontend/src/hooks/useConversation.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-playful-educational-design-theme-with-bright-colors-friendly-typography-and-an-engaging-layout-that-appeals-to-children-while-maintaining-readability-and-usability",
+      "featureTitle": "Apply a playful, educational design theme with bright colors, friendly typography, and an engaging layout that appeals to children while maintaining readability and usability",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

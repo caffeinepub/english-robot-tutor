@@ -1,0 +1,127 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "English Robot Tutor - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a child-friendly robot character interface",
+      "acceptanceCriteria": [
+        "Robot character is visually displayed on screen",
+        "Design is age-appropriate and welcoming for children",
+        "Robot has a distinct visual identity that supports the learning context"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/RobotCharacter.tsx",
+          "operation": "create",
+          "description": "Create RobotCharacter component displaying the generated robot image (frontend/public/assets/generated/robot-character.dim_512x512.png) with animated states (idle, listening, speaking) and child-friendly visual presentation"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire RobotCharacter component into the main app view as the central conversational interface element"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement voice input functionality for children to speak English",
+      "acceptanceCriteria": [
+        "Children can activate voice recording through the interface",
+        "Spoken audio is captured and converted to text",
+        "Voice input works reliably for child speech patterns"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useSpeechRecognition.ts",
+          "operation": "create",
+          "description": "Create custom hook using browser Web Speech API (SpeechRecognition) to capture voice input, handle start/stop recording, and return transcribed text without external services"
+        },
+        {
+          "path": "frontend/src/components/VoiceInput.tsx",
+          "operation": "create",
+          "description": "Create VoiceInput component with a large, child-friendly microphone button that uses useSpeechRecognition hook to capture spoken English and display transcription status"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Integrate VoiceInput component below RobotCharacter and wire voice transcription results to conversation flow"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Display correction feedback in a clear, encouraging manner",
+      "acceptanceCriteria": [
+        "Corrections are presented in child-friendly language",
+        "Feedback highlights the mistake and provides the correct form",
+        "Tone is educational and supportive rather than critical"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CorrectionFeedback.tsx",
+          "operation": "create",
+          "description": "Create CorrectionFeedback component to display corrections with visual highlighting of mistakes, supportive language, and clear presentation of correct forms using friendly typography and encouraging messaging"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire CorrectionFeedback component to display correction data from ConversationTurn.correction field when present in robot responses"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement conversation flow with robot responses and corrections",
+      "acceptanceCriteria": [
+        "Robot provides conversational responses after each user input",
+        "Dialogue feels natural and maintains context",
+        "Corrections are integrated into the conversational flow"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ConversationHistory.tsx",
+          "operation": "create",
+          "description": "Create ConversationHistory component to display the conversation log retrieved from backend.getConversationLog(), showing user inputs, robot responses, and inline corrections in a scrollable chat-like interface"
+        },
+        {
+          "path": "frontend/src/hooks/useConversation.ts",
+          "operation": "create",
+          "description": "Create custom hook to manage conversation state, call backend.processInput() with user transcriptions, fetch conversation log, and handle loading/error states"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire useConversation hook to orchestrate the conversation flow: send voice input to backend via processInput(), update ConversationHistory with results, and trigger RobotCharacter visual state changes"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Apply playful, educational design theme for children",
+      "acceptanceCriteria": [
+        "Visual design is cohesive across all screens",
+        "Color palette is vibrant and age-appropriate",
+        "Layout supports easy navigation for young users"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add child-friendly global styles with bright, vibrant color palette, rounded corners, playful shadows, and large font sizes suitable for young learners while maintaining readability"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom colors (bright primary, cheerful secondary, encouraging success green), larger spacing scale, and playful font configurations for educational context"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply cohesive layout structure with centered robot character, clear visual hierarchy, and child-friendly spacing using the custom theme tokens from Tailwind configuration"
+        }
+      ]
+    }
+  ]
+}

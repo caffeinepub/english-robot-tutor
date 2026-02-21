@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Motoko actor that processes user input, analyzes common grammar mistakes (e.g., 'goed', 'gonna'), generates correction feedback, and maintains a conversation log of turns with user input, robot responses, and optional corrections.",
+  "feature_evidence.json": "Feature evidence report documenting five implemented features: child-friendly robot interface, voice input, correction feedback display, conversation flow, and playful educational design theme with associated files and test IDs.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of all frontend source files describing components, hooks, and configuration for the robot tutor interface.",
+  "frontend/index.css": "Tailwind CSS base styles with custom CSS variables for light and dark themes using OKLCH color space, defining design tokens for backgrounds, borders, and UI elements.",
+  "frontend/index.html": "HTML entry point that loads the React application with title 'English Robot Tutor' and mounts to root div.",
+  "frontend/src/App.tsx": "Main React component orchestrating the robot tutor UI with robot character, voice input, and conversation history in a gradient-styled layout with header and footer.",
+  "frontend/src/components/ConversationHistory.tsx": "Scrollable conversation display component showing user messages, robot responses, and correction feedback in colored chat bubbles with loading states.",
+  "frontend/src/components/CorrectionFeedback.tsx": "Component displaying grammar corrections in a yellow-highlighted box with lightbulb icon for encouraging learning feedback.",
+  "frontend/src/components/RobotCharacter.tsx": "Animated robot character component with state-based visual feedback (idle, listening, speaking) using dynamic gradients, bounce animations, and status messages.",
+  "frontend/src/components/VoiceInput.tsx": "Voice input component with large microphone button using speech recognition hook, displaying recording status, transcripts, and browser compatibility warnings.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that manages the backend actor instance, creating authenticated or anonymous actors based on Internet Identity state and invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useConversation.ts": "React hook that manages conversation state and interactions, providing methods to send messages to the backend actor and retrieve conversation logs using React Query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Comprehensive Internet Identity authentication provider and hook that manages user login/logout state, identity persistence, and AuthClient configuration for ICP authentication.",
+  "frontend/src/hooks/useQueries.ts": "Simple React Query hook that fetches conversation log data from the backend actor when available.",
+  "frontend/src/hooks/useSpeechRecognition.ts": "Custom hook that wraps the browser's Web Speech Recognition API to provide voice input functionality with transcript capture, listening state management, and error handling.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom CSS variables defining a comprehensive design system including light/dark mode color schemes, spacing, and animation utilities.",
+  "frontend/src/main.tsx": "Application entry point that sets up React Query client and Internet Identity provider, then renders the root App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom colors using OKLCH color space, animations, typography, and container query plugins.",
+  "project_state.json": "Project metadata defining an English learning app for children with AI robot tutor, tracking implemented features like voice input and conversation flow, and pending features like grammar correction backend logic."
+}

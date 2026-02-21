@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the robot tutor interface with robot character, voice input, and conversation history in a child-friendly layout with gradient backgrounds and playful styling.",
+  "frontend/src/components/RobotCharacter.tsx": "Displays the animated robot character with state-based visual feedback (idle, listening, speaking) using the generated robot image and dynamic color gradients.",
+  "frontend/src/components/VoiceInput.tsx": "Voice input component with large microphone button that uses browser speech recognition API to capture children's spoken English with visual recording feedback.",
+  "frontend/src/components/ConversationHistory.tsx": "Scrollable conversation display showing user messages, robot responses, and correction feedback in colorful chat bubbles with clear visual hierarchy.",
+  "frontend/src/components/CorrectionFeedback.tsx": "Displays grammar and pronunciation corrections in an encouraging yellow-highlighted box with lightbulb icon for positive learning reinforcement.",
+  "frontend/src/hooks/useSpeechRecognition.ts": "Custom React hook that wraps the browser Web Speech Recognition API to handle voice input, transcription, and error states for child-friendly voice interaction.",
+  "frontend/src/hooks/useConversation.ts": "Manages conversation state and backend communication, handling message sending via processInput() and fetching conversation log with React Query.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook for fetching conversation log from backend with proper actor initialization and loading state management.",
+  "frontend/src/index.css": "Global styles with vibrant OKLCH color system featuring purple primary colors, bright gradients, and child-friendly design tokens for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with playful color palette, larger border radius, custom fonts, and child-appropriate design tokens matching the educational theme."
+}

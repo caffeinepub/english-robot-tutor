@@ -1,0 +1,130 @@
+{
+  "kind": "build_request",
+  "title": "Create English learning conversation app with AI robot",
+  "projectName": "English Robot Tutor",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a child-friendly robot character interface that serves as the conversation partner, with visual elements appropriate for young English learners",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "children can talk to an English robot"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Robot character is visually displayed on screen",
+        "Design is age-appropriate and welcoming for children",
+        "Robot has a distinct visual identity that supports the learning context"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement voice input functionality allowing children to speak English phrases or sentences to the robot",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "children can talk to an English robot"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Children can activate voice recording through the interface",
+        "Spoken audio is captured and converted to text",
+        "Voice input works reliably for child speech patterns"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create backend logic to analyze spoken English input for grammar mistakes, pronunciation errors, and language inaccuracies",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "the robot will correct mistakes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "System identifies grammatical errors in user input",
+        "System detects pronunciation issues",
+        "Analysis results are returned in a structured format"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Display correction feedback from the robot in a clear, encouraging manner that explains mistakes without discouraging the child learner",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "the robot will correct mistakes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Corrections are presented in child-friendly language",
+        "Feedback highlights the mistake and provides the correct form",
+        "Tone is educational and supportive rather than critical"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement conversation flow where the robot responds to the child's input, providing both corrections and continuing the dialogue naturally",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "children can talk to an English robot"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Robot provides conversational responses after each user input",
+        "Dialogue feels natural and maintains context",
+        "Corrections are integrated into the conversational flow"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Apply a playful, educational design theme with bright colors, friendly typography, and an engaging layout that appeals to children while maintaining readability and usability",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visual design is cohesive across all screens",
+        "Color palette is vibrant and age-appropriate",
+        "Layout supports easy navigation for young users"
+      ]
+    }
+  ],
+  "constraints": [
+    "Voice input must be processed through frontend browser APIs without requiring external third-party speech services",
+    "All conversation and correction logic must be implemented in the Motoko backend actor"
+  ],
+  "nonGoals": [
+    "Multi-user accounts or parental dashboards",
+    "Progress tracking or gamification features",
+    "Lesson plans or structured curriculum",
+    "Real-time teacher oversight or monitoring",
+    "Mobile app versions"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Friendly cartoon robot character with large expressive eyes and a welcoming smile, suitable for children's educational app (robot-character.dim_512x512.png)"
+    ],
+    "edits": []
+  }
+}
